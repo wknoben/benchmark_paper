@@ -57,12 +57,6 @@ benchmarks_to_calculate = [
 ]
 metrics = ["nse", "kge", "mse", "rmse"]
 
-# First run: fixed cal/val periods
-# Downside: not all basins have data for the full period
-# so we end up with some NaNs in the scores
-#
-#end_cal_date = np.datetime64("1999-01-01")
-
 # --- Create the benchmark function ---
 def run_benchmarks_for_file(data_file):
 
@@ -72,7 +66,7 @@ def run_benchmarks_for_file(data_file):
     # Load the data
     data = xr.open_dataset(data_file)
 
-    # Second run: use half of the available data for calibration
+    # Use half of the available data for calibration
     flow_mask = data['streamflow'] >= 0
     flow_dates = data['date'].values[flow_mask]
     median_date = flow_dates[len(flow_dates) // 2]
