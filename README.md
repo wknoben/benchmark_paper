@@ -39,17 +39,16 @@ When attempting to replicate this work, download the CARAVAN data manually and u
 - https://github.com/wknoben/benchmark_paper/blob/878a7227d8608c0dc5dc549452fddcc38a83614c/3_exploratory_analysis.py#L10
 - https://github.com/wknoben/benchmark_paper/blob/878a7227d8608c0dc5dc549452fddcc38a83614c/5_large_domain_plots.py#L15
 - https://github.com/wknoben/benchmark_paper/blob/878a7227d8608c0dc5dc549452fddcc38a83614c/5_large_domain_plots.py#L29
+- https://github.com/wknoben/benchmark_paper/blob/878a7227d8608c0dc5dc549452fddcc38a83614c/6_calibrate_marrmot_models.m#L9
+    - **Note**: The path used in this script is different from the CARAVAN paths in the other scripts as a consequence of running on two different computational environments. Changing this to your CARAVAN directory (same path you'll use in the other scripts) should be correct.
  
 Similarly, clone the MARRMoT repository and update the relevant paths in the code:
 - https://github.com/wknoben/benchmark_paper/blob/878a7227d8608c0dc5dc549452fddcc38a83614c/6_calibrate_marrmot_models.m#L3
 
 
 Further path changes needed:
-- https://github.com/wknoben/benchmark_paper/blob/878a7227d8608c0dc5dc549452fddcc38a83614c/3_exploratory_analysis.py#L24
-- https://github.com/wknoben/benchmark_paper/blob/878a7227d8608c0dc5dc549452fddcc38a83614c/6_calibrate_marrmot_models.m#L9
-
-
-
+- If script 1 was run on HPC, this path is where the log files are expected to be. These contain the runtime. Disable this part of the code if no log files are available.
+    - https://github.com/wknoben/benchmark_paper/blob/878a7227d8608c0dc5dc549452fddcc38a83614c/3_exploratory_analysis.py#L24
 
 ## References
 Knoben, W. J. M., Freer, J. E., Fowler, K. J. A., Peel, M. C., and Woods, R. A. (2019). Modular Assessment of Rainfall–Runoff Models Toolbox (MARRMoT) v1.2: an open-source, extendable framework providing implementations of 46 conceptual hydrologic models as continuous state-space formulations, Geosci. Model Dev., 12, 2463–2480, https://doi.org/10.5194/gmd-12-2463-2019
